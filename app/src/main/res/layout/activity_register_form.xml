@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView_registerFormEmailDirection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="15dp"
+        android:text="@string/email"
+        android:textColor="@android:color/black"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_registerFormEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:paddingStart="10dp"
+        android:background="@android:color/white"
+        android:ems="10"
+        android:hint="@string/email_address"
+        android:inputType="textEmailAddress"
+        app:layout_constrainedWidth="true"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_registerFormEmailDirection" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:textColor="@android:color/holo_red_light"
+        android:background="@drawable/login_button_shape"
+        android:text="@string/double_check"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_registerFormEmailAddress" />
+
+    <TextView
+        android:id="@+id/textView_registerFormPasswordDirection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:textColor="@android:color/black"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:text="@string/create_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <EditText
+        android:id="@+id/editText_registerFormPassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:paddingStart="10dp"
+        android:background="@android:color/white"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="@string/input_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_registerFormPasswordDirection" />
+
+    <EditText
+        android:id="@+id/editText_editText_registerFormPasswordDoubleCheck"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:paddingStart="10dp"
+        android:background="@android:color/white"
+        android:ems="10"
+        android:hint="@string/reInput_password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_registerFormPassword" />
+
+    <TextView
+        android:id="@+id/textView_registerFormNameDirection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:textColor="@android:color/black"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:text="@string/name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_editText_registerFormPasswordDoubleCheck" />
+
+    <EditText
+        android:id="@+id/editText_registerFormName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:paddingStart="10dp"
+        android:background="@android:color/white"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_registerFormNameDirection" />
+
+    <Button
+        android:id="@+id/button_registerFormNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/login_button_shape"
+        android:text="@string/next"
+        android:textColor="@android:color/holo_red_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_registerFormName" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

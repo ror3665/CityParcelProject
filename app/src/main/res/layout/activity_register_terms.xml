@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textView_registerTermsDirection1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:textColor="@android:color/black"
+        android:text="@string/register_terms_direction1"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_registerTermsDirection2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:textColor="@android:color/black"
+        android:text="@string/register_terms_direction2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_registerTermsDirection1" />
+
+    <TextView
+        android:id="@+id/textView_registerTermsDirection3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:text="@string/register_terms_direction3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_registerTermsDirection2" />
+
+    <TextView
+        android:id="@+id/textView_registerTermsDirection4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:textColor="@android:color/black"
+        android:text="1. 항목: 이름, 이메일주소, 휴대폰 번호, 패스워드, 주소\n2. 목적: 고객 및 배송 관리\n3. 보유 기간: 회원 탈퇴 시까지 "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_registerTermsDirection3" />
+
+    <TextView
+        android:id="@+id/textView_registerTermsDirection5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="@string/registerTermsDirection5"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_registerTermsDirection4" />
+
+    <CheckBox
+        android:id="@+id/checkBox_registerTermsCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_registerTermsDirection5" />
+
+    <TextView
+        android:id="@+id/textView_registerTermsDirection6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        app:layout_constrainedWidth="true"
+        android:text="@string/register_terms_direction6"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/checkBox_registerTermsCheckbox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/checkBox_registerTermsCheckbox"
+        app:layout_constraintTop_toTopOf="@+id/checkBox_registerTermsCheckbox"
+        />
+
+        <Button
+            android:id="@+id/button_registerAccept"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@android:color/holo_red_light"
+            android:text="@string/register_accept"
+            android:textColor="@android:color/white"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox_registerTermsCheckbox" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">CityParcel</string>
+    <string name="singUp">가입하기</string>
+    <string name="welcomeDirection1">회원이십니까?</string>
+    <string name="welcomeDirection2">City parcel 앱 접속을 위해서는 로그인이 필요합니다</string>
+    <string name="loginIn">로그인하기</string>
+    <string name="register_terms_direction1">개인정보 수집 및 이용에 대한 안내</string>
+    <string name="register_terms_direction2">내용을 자세히 읽고 동의해 주십시요</string>
+    <string name="register_terms_direction3">개인정보 수집 및 이용</string>
+    <string name="welcome_image">TODO</string>
+    <string name="registerTermsDirection5">귀하는 상기 게재된 개인 정보 수집에 대한 동의를 거부할 권리가 있으며, 동의 거부 시에는 회원 등록이 제한될 수 있습니다.</string>
+    <string name="register_accept">동의</string>
+    <string name="register_terms_direction6">본인은 개인정보의 수집 및 이용에 관한 사항을 모두 이해하였으며 이해 동의 합니다.</string>
+    <string name="next">다음</string>
+    <string name="email">이메일</string>
+    <string name="email_address">이메일 주소</string>
+    <string name="double_check">중복확인</string>
+    <string name="create_password">비밀번호 생성</string>
+    <string name="input_password">비밀번호</string>
+    <string name="reInput_password">비밀번호 재입력</string>
+    <string name="name">이름</string>
+    <string name="done">완료</string>
+    <string name="login">로그인</string>
+    <string name="my_address">내 주소</string>
+    <string name="detail_address">상세주소</string>
+    <string name="address">주소</string>
+    <string name="search_address">주소찾기</string>
+    <string name="blank" />
+    <string name="postal_code">우편번호</string>
+</resources>
