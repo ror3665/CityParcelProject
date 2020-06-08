@@ -61,7 +61,7 @@ public class DaumWebViewActivity extends AppCompatActivity {
         webView.setWebViewClient(new WebViewClient());
 
         // webview url load. php 파일 주소
-        webView.loadUrl("http://gator7.asuscomm.com/searchaddress.php");
+        webView.loadUrl("http://thecityparcel.com/searchaddress.php");
 
     }
 
