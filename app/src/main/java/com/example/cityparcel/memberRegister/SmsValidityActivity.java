@@ -1,4 +1,4 @@
-package com.example.cityparcel.register;
+package com.example.cityparcel.memberRegister;
 
 import androidx.appcompat.app.AppCompatActivity;
 

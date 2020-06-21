@@ -18,14 +18,16 @@
 
         <!-- serviceHome package -->
         <activity android:name=".serviceHome.ServiceMainActivity"/>
+        <activity android:name=".serviceHome.FindParcelActivity"/>
+        <activity android:name=".serviceHome.RegisterParcelActivity"/>
         <!-- login package-->
         <activity android:name=".login.LoginWindowActivity" android:windowSoftInputMode="adjustResize|stateHidden"/>
-        <!-- register package-->
-        <activity android:name=".register.DaumWebViewActivity"/>
-        <activity android:name=".register.RegisterTermsActivity" />
-        <activity android:name=".register.SmsValidityActivity" android:windowSoftInputMode="adjustResize|stateHidden"/>
-        <activity android:name=".register.RegisterAddressFormActivity" android:windowSoftInputMode="adjustResize|stateHidden"/>
-        <activity android:name=".register.RegisterFormActivity" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <!-- member register package-->
+        <activity android:name=".memberRegister.DaumWebViewActivity"/>
+        <activity android:name=".memberRegister.RegisterTermsActivity" />
+        <activity android:name=".memberRegister.SmsValidityActivity" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:name=".memberRegister.RegisterAddressFormActivity" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:name=".memberRegister.RegisterFormActivity" android:windowSoftInputMode="adjustResize|stateHidden"/>
         <!-- root package-->
         <activity android:name=".MainActivity">
             <intent-filter>

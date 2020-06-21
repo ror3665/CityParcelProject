@@ -27,4 +27,9 @@
     <string name="search_address">주소찾기</string>
     <string name="blank" />
     <string name="postal_code">우편번호</string>
+    <string name="city_parcel">도심택배</string>
+    <string name="find_city">동네 찾기</string>
+    <string name="find_parcel">운송찾기</string>
+    <string name="register_parcel">운송신청</string>
+    <string name="find_my_parcel">내 운송품 추적</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.example.cityparcel.register;
+package com.example.cityparcel.memberRegister;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;

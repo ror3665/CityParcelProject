@@ -1,4 +1,4 @@
-package com.example.cityparcel.register;
+package com.example.cityparcel.memberRegister;
 
 import com.android.volley.Response;
 import com.android.volley.toolbox.StringRequest;

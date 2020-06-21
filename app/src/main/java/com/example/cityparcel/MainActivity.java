@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.cityparcel.login.LoginWindowActivity;
-import com.example.cityparcel.register.RegisterTermsActivity;
+import com.example.cityparcel.memberRegister.RegisterTermsActivity;
 
 public class MainActivity extends AppCompatActivity {
 

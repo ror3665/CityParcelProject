@@ -1,4 +1,4 @@
-package com.example.cityparcel.register;
+package com.example.cityparcel.memberRegister;
 
 import android.content.Intent;
 import android.os.Bundle;
