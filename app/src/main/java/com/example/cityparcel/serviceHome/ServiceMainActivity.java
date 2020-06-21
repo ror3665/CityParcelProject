@@ -36,6 +36,7 @@ public class ServiceMainActivity extends AppCompatActivity {
     String[] REQUIRED_PERMISSIONS = {Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION};
     TextView textView_memberEmail, textView_memberCity;
     Button findCityButton, registerParcelButton, findParcelButton;
+    String memEmail;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,7 +49,7 @@ public class ServiceMainActivity extends AppCompatActivity {
         findParcelButton = (Button) findViewById(R.id.button_serviceMain_findParcel);
 
         Intent intent = getIntent();
-        String memEmail = intent.getStringExtra("mem_email");
+        memEmail = intent.getStringExtra("mem_email");
         textView_memberEmail.setText(memEmail);
 
         if (!checkLocationServicesStatus()) {
@@ -80,6 +81,8 @@ public class ServiceMainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ServiceMainActivity.this, RegisterParcelActivity.class);
+                intent.putExtra("memEmail", memEmail);
+                intent.putExtra("myLocation", textView_memberCity.getText().toString());
                 ServiceMainActivity.this.startActivity(intent);
             }
         });

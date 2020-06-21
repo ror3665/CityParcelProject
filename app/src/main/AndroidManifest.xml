@@ -23,7 +23,7 @@
         <!-- login package-->
         <activity android:name=".login.LoginWindowActivity" android:windowSoftInputMode="adjustResize|stateHidden"/>
         <!-- member register package-->
-        <activity android:name=".memberRegister.DaumWebViewActivity"/>
+        <activity android:name=".webView.DaumWebViewActivity"/>
         <activity android:name=".memberRegister.RegisterTermsActivity" />
         <activity android:name=".memberRegister.SmsValidityActivity" android:windowSoftInputMode="adjustResize|stateHidden"/>
         <activity android:name=".memberRegister.RegisterAddressFormActivity" android:windowSoftInputMode="adjustResize|stateHidden"/>
