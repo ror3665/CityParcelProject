@@ -36,4 +36,6 @@
     <string name="title">제목</string>
     <string name="my_location">내 위치</string>
     <string name="destination_location">목적지 위치</string>
+    <string name="starting_point">출발지</string>
+    <string name="service_price">운송비용</string>
 </resources>

@@ -90,7 +90,9 @@ public class ServiceMainActivity extends AppCompatActivity {
         findParcelButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String startingPoint = textView_memberCity.getText().toString();
                 Intent intent = new Intent(ServiceMainActivity.this, FindParcelActivity.class);
+                intent.putExtra("startingPoint", startingPoint);
                 ServiceMainActivity.this.startActivity(intent);
             }
         });
