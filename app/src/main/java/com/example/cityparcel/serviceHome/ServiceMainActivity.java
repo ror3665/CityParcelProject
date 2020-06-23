@@ -93,6 +93,7 @@ public class ServiceMainActivity extends AppCompatActivity {
                 String startingPoint = textView_memberCity.getText().toString();
                 Intent intent = new Intent(ServiceMainActivity.this, FindParcelActivity.class);
                 intent.putExtra("startingPoint", startingPoint);
+                intent.putExtra("memEmail", memEmail);
                 ServiceMainActivity.this.startActivity(intent);
             }
         });

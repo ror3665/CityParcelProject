@@ -3,6 +3,7 @@ package com.example.cityparcel.serviceHome;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,9 +27,10 @@ public class FindParcelActivity extends AppCompatActivity {
 
     private FindParcelAdapter findParcelAdapter;
     private static String URL = "http://thecityparcel.com/ParcelList.php";
-    private String startingPoint, getTitle, getDestination, getPrice;
+    private String startingPoint, getTitle, getDestination, getPrice, getMember, memEmail;
     private TextView startingPointTextView;
     private RecyclerView recyclerView;
+    private int index;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,17 +38,24 @@ public class FindParcelActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         startingPoint = intent.getStringExtra("startingPoint");
+        memEmail = intent.getStringExtra("memEmail");
         startingPointTextView = (TextView) findViewById(R.id.textView_find_parcel_startPoint);
         startingPointTextView.setText(startingPoint);
-
         init();
-        Log.d("HEEDONG", Integer.toString(findParcelAdapter.getItemCount()));
 
+        findParcelAdapter.setOnItemClickListener(new FindParcelAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View v, int position) {
+                Intent intent = new Intent(FindParcelActivity.this, FindParcelInfoActivity.class);
+                intent.putExtra("member", getMember);
+                intent.putExtra("parcelIdx", index);
+                intent.putExtra("memEmail", memEmail);
+                FindParcelActivity.this.startActivity(intent);
+            }
+        });
     }
 
     private void init() {
-
-
         recyclerView = findViewById(R.id.find_parcel_recycleView);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
@@ -67,10 +76,11 @@ public class FindParcelActivity extends AppCompatActivity {
                         getTitle = jData.getString("parcel_title");
                         getDestination = jData.getString("parcel_destination");
                         getPrice = jData.getString("parcel_price");
-                        findParcelAdapter.addItem(new FindParcelNode(getTitle, getDestination, getPrice));
-                        Log.d("HEEDONG", Integer.toString(findParcelAdapter.getItemCount()));
+                        index = jData.getInt("parcel_idx");
+                        getMember = jData.getString("parcel_member");
+                        findParcelAdapter.addItem(new FindParcelNode(index, getTitle, getDestination, getPrice, getMember));
                     }
-                    recyclerView.setAdapter(findParcelAdapter);
+                    recyclerView.setAdapter(findParcelAdapter); //show
                 } catch (JSONException e) {
                     Log.e("JSON Parser", "Error parsing data [" + e.getMessage()+"]");
                 }
@@ -78,7 +88,7 @@ public class FindParcelActivity extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(FindParcelActivity.this, "Something went wrong", Toast.LENGTH_LONG).show();
+                Toast.makeText(FindParcelActivity.this, "DB CONNECTION FAIL", Toast.LENGTH_LONG).show();
                 error.printStackTrace();
             }
         }) {
@@ -91,6 +101,5 @@ public class FindParcelActivity extends AppCompatActivity {
         };
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
-
     }
 }

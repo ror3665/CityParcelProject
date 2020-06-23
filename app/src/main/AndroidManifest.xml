@@ -20,6 +20,7 @@
         <activity android:name=".serviceHome.ServiceMainActivity"/>
         <activity android:name=".serviceHome.FindParcelActivity"/>
         <activity android:name=".serviceHome.RegisterParcelActivity"/>
+        <activity android:name=".serviceHome.FindParcelInfoActivity"/>
         <!-- login package-->
         <activity android:name=".login.LoginWindowActivity" android:windowSoftInputMode="adjustResize|stateHidden"/>
         <!-- member register package-->

@@ -16,7 +16,6 @@ public class LoginRequest extends StringRequest {
     public LoginRequest(String mem_email, String mem_password, Response.Listener<String> listener) {
         super(Method.POST, URL, listener, null);
         parameters = new HashMap<>();
-        Log.d("heedong", mem_email + " " + mem_password);
         parameters.put("mem_email", mem_email);
         parameters.put("mem_password", mem_password);
     }

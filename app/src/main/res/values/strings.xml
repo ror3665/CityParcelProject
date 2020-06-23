@@ -38,4 +38,9 @@
     <string name="destination_location">목적지 위치</string>
     <string name="starting_point">출발지</string>
     <string name="service_price">운송비용</string>
+    <string name="username">USERNAME</string>
+    <string name="parcel_info">운송물품 정보</string>
+    <string name="input_message">메시지를 입력하세요</string>
+    <string name="writer">작성자</string>
+    <string name="comment">댓글</string>
 </resources>
