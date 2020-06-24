@@ -31,7 +31,7 @@
     <string name="find_city">동네 찾기</string>
     <string name="find_parcel">운송찾기</string>
     <string name="register_parcel">운송신청</string>
-    <string name="find_my_parcel">내 운송품 추적</string>
+    <string name="find_my_parcel">나의 운송품 상태</string>
     <string name="write_register_parcel">운송신청 글쓰기</string>
     <string name="title">제목</string>
     <string name="my_location">내 위치</string>
@@ -43,4 +43,5 @@
     <string name="input_message">메시지를 입력하세요</string>
     <string name="writer">작성자</string>
     <string name="comment">댓글</string>
+    <string name="track">Track</string>
 </resources>

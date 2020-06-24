@@ -136,7 +136,7 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
 
         <Button
-            android:id="@+id/button_serviceMain_findMyParcel"
+            android:id="@+id/button_serviceMain_trackMyParcel"
             android:background="@android:color/transparent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -152,7 +152,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button_serviceMain_myParcelHistory"
+            android:id="@+id/button_serviceMain_deliveryman"
             android:background="@android:color/transparent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -160,12 +160,12 @@
             android:drawableStart="@drawable/my_parcel_history"
             android:drawablePadding="10dp"
             android:paddingStart="15dp"
-            android:text="내 운송품 기록"
+            android:text="내가 운송하는 물품"
             android:textColor="@android:color/black"
             android:gravity="left|center_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_serviceMain_findMyParcel" />
+            app:layout_constraintTop_toBottomOf="@+id/button_serviceMain_trackMyParcel" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

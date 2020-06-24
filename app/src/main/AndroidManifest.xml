@@ -16,11 +16,19 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
 
+        <!-- deliveryman package -->
+        <activity android:name=".deliveryman.DeliveryManActivity"/>
+        <!-- track package -->
+        <activity android:name=".track.CompletedPackageActivity"/>
+        <activity android:name=".track.ShippingPackageActivity"/>
+        <activity android:name=".track.ScheduledPackageActivity"/>
+        <activity android:name=".track.TrackMyParcelActivity"/>
         <!-- serviceHome package -->
         <activity android:name=".serviceHome.ServiceMainActivity"/>
         <activity android:name=".serviceHome.FindParcelActivity"/>
         <activity android:name=".serviceHome.RegisterParcelActivity"/>
         <activity android:name=".serviceHome.FindParcelInfoActivity"/>
+
         <!-- login package-->
         <activity android:name=".login.LoginWindowActivity" android:windowSoftInputMode="adjustResize|stateHidden"/>
         <!-- member register package-->

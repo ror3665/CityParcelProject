@@ -21,9 +21,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.cityparcel.MainActivity;
 import com.example.cityparcel.R;
-import com.example.cityparcel.memberRegister.RegisterTermsActivity;
+import com.example.cityparcel.deliveryman.DeliveryManActivity;
+import com.example.cityparcel.track.TrackMyParcelActivity;
 
 import java.io.IOException;
 import java.util.List;
@@ -36,6 +36,7 @@ public class ServiceMainActivity extends AppCompatActivity {
     String[] REQUIRED_PERMISSIONS = {Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION};
     TextView textView_memberEmail, textView_memberCity;
     Button findCityButton, registerParcelButton, findParcelButton;
+    Button trackMyParcelBtn, deliverymanBtn;
     String memEmail;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,16 +48,16 @@ public class ServiceMainActivity extends AppCompatActivity {
         findCityButton = (Button) findViewById(R.id.button_serviceMain_findCity);
         registerParcelButton = (Button) findViewById(R.id.button_serviceMain_registerParcel);
         findParcelButton = (Button) findViewById(R.id.button_serviceMain_findParcel);
+        trackMyParcelBtn = (Button) findViewById(R.id.button_serviceMain_trackMyParcel);
+        deliverymanBtn = (Button) findViewById(R.id.button_serviceMain_deliveryman);
 
         Intent intent = getIntent();
         memEmail = intent.getStringExtra("mem_email");
         textView_memberEmail.setText(memEmail);
 
         if (!checkLocationServicesStatus()) {
-
             showDialogForLocationServiceSetting();
         } else {
-
             checkRunTimePermission();
         }
 
@@ -93,6 +94,24 @@ public class ServiceMainActivity extends AppCompatActivity {
                 String startingPoint = textView_memberCity.getText().toString();
                 Intent intent = new Intent(ServiceMainActivity.this, FindParcelActivity.class);
                 intent.putExtra("startingPoint", startingPoint);
+                intent.putExtra("memEmail", memEmail);
+                ServiceMainActivity.this.startActivity(intent);
+            }
+        });
+
+        trackMyParcelBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ServiceMainActivity.this, TrackMyParcelActivity.class);
+                intent.putExtra("memEmail", memEmail);
+                ServiceMainActivity.this.startActivity(intent);
+            }
+        });
+
+        deliverymanBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ServiceMainActivity.this, DeliveryManActivity.class);
                 intent.putExtra("memEmail", memEmail);
                 ServiceMainActivity.this.startActivity(intent);
             }
