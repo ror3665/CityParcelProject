@@ -33,6 +33,10 @@ public class FindParcelAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         ((ViewHolderFindParcel) holder).onBind(listData.get(position));
     }
 
+    public ArrayList<FindParcelNode> getList() {
+        return listData;
+    }
+
     @Override
     public int getItemCount() {
         return listData.size();

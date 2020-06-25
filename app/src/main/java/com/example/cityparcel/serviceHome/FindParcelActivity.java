@@ -48,7 +48,7 @@ public class FindParcelActivity extends AppCompatActivity {
             public void onItemClick(View v, int position) {
                 Intent intent = new Intent(FindParcelActivity.this, FindParcelInfoActivity.class);
                 intent.putExtra("member", getMember);
-                intent.putExtra("parcelIdx", index);
+                intent.putExtra("parcelIdx", findParcelAdapter.getList().get(position).getIndex());
                 intent.putExtra("memEmail", memEmail);
                 FindParcelActivity.this.startActivity(intent);
             }

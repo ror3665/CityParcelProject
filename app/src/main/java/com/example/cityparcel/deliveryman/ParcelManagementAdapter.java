@@ -1,6 +1,7 @@
 package com.example.cityparcel.deliveryman;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,13 +11,27 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.cityparcel.R;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
 public class ParcelManagementAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
+    private static String URL = "http://thecityparcel.com/ShippingToCompleted.php";
     private ArrayList<ParcelNode> listData = new ArrayList<>();
 
     public interface OnItemClickListener {
@@ -42,6 +57,7 @@ public class ParcelManagementAdapter extends RecyclerView.Adapter<RecyclerView.V
         ((ParcelManagementAdapter.ViewHolderParcelManagement) holder).deleteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                setStateDeliveryPHP(Integer.toString(listData.get(position).getIndex()));
                 listData.remove(position);
                 notifyItemRemoved(position);
                 notifyItemRangeChanged(position, listData.size());
@@ -99,5 +115,40 @@ public class ParcelManagementAdapter extends RecyclerView.Adapter<RecyclerView.V
             textViewPrice.setText("운송비용: " + price);
 
         }
+    }
+
+    private void setStateDeliveryPHP(final String index) {
+        Log.d("heedong", index);
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONObject jsonObject = new JSONObject(response);
+                            String success = jsonObject.getString("success");
+
+                            if (success.equals("1")) {
+                                //nothing to do
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                    }
+                }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> params = new HashMap<>();
+                params.put("index", index);
+                return params;
+            }
+        };
+
+        RequestQueue requestQueue = Volley.newRequestQueue(context);
+        requestQueue.add(stringRequest);
     }
 }
